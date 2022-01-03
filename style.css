@@ -1,0 +1,251 @@
+/*PRINCIPAL CONTAINER*/
+*{
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+.padre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 1px;
+}
+
+/*HEADER*/
+.header {
+    display: flex;
+
+}
+
+.nombre, .navbar{
+    flex-grow: 1;
+}
+
+
+/*NAV BAR*/
+.navbar{
+    display: flex;
+    
+}
+.botonav{
+    flex-grow: 1;
+    margin-top: 2em;
+}
+
+  .botonav a {
+    background-color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: 0.5rem;
+    padding: 0.5em;
+    
+    border: 1px solid;
+    border-radius: 2px;
+    transition: all 1s ease;
+    position: relative;
+  }
+
+h4 {
+    background-color: rgba(53, 53, 53, 0.952);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 5px;
+    height: 100%;
+}
+
+.header, .proyectos, .footer, .sobremi{
+    flex-grow: 1;
+    flex-basis: 100%; 
+    padding: 10px;
+    margin: 0.5rem;
+    text-align: center;
+}
+/***************************************/
+/*PROYECTOS*/
+
+
+/*Imágenes*/
+
+
+.imgtpo, .imgconsecionaria, .imgjoyeria, .imgportfolio{
+    margin: 15px;
+    background-size: cover;
+    height: auto;
+    width: auto ;
+    opacity: 0.9;
+    
+}
+.imgtpo{
+    background-image: url("img/vivero-01.jpeg");
+    
+}
+.imgconsecionaria{
+    background-image: url("img/concesionaria.jpeg");
+    
+    
+}
+.imgportfolio{
+    background-image: url("img/port-01.jpeg");
+    
+}
+.imgjoyeria{
+    background-image: url("img/joyeria.png");
+    
+}
+/*contenedores de proyectos*/
+
+.proyecto .sobremi{
+    display: flex; 
+    
+}
+.proyectocontainer{
+    text-align: center;
+    flex-grow: 1;
+    flex: auto; 
+}
+.proyectocontainer a{
+    display: flex;
+    background-color: rgb(145, 145, 145);
+    padding: 2em;
+    
+    border-radius: 5px;
+    
+    
+}
+.proyectocontainer a:hover{
+    opacity: 100%;
+}
+.proyectocontainer a,
+.botonav a {
+    text-decoration: none;
+    
+}
+.nombre a:visited,
+.nombre a:link,
+.nombre a:active{
+    text-decoration: none;
+    color: black
+}
+
+.selfie img  {
+     max-width: 100px;
+     float: left;    
+     margin: 10px 10px 5px 5px;
+     border-radius: 50%;
+     padding-left: 2%;
+    }
+/**/
+/**************************************************************************************/
+h3 {
+    padding-top: 10px;
+}
+.text, p {
+    padding: 3%;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+
+/****************************************************/
+/* media queries */
+
+/* tamaño tablet */
+@media all and (max-width: 800px){
+    .header, .footer{
+        border: 2px solid #e194ff;
+        border-radius: 5px;
+        
+    }
+    .nombre{
+        font-size: 0.6em;
+    }
+    .botonav a{
+        font-size: 0.8em;
+        border-color: #e194ff;;
+    }
+    .botonav {
+        margin-top: 1em;
+    }
+    .proyectos, .sobremi{
+        border: 2px solid #e2a5e3;
+        border-radius: 3px;
+    }
+    
+    .proyectocontainer a{
+        border: 2px solid rgb(238, 178, 240)
+    }
+    
+    .botonav a:hover {
+        background-color: rgb(238, 178, 240);
+      }
+      .imgtpo, .imgconsecionaria, .imgjoyeria, .imgportfolio{
+          opacity: 100%;
+      }
+      .selfie img  {
+        max-width: 150px;
+         
+        }
+    .presentacion, .algomas {
+        background-color: #e194ff6e;
+        border-radius: 15px;
+        
+
+            
+    }
+    .botonav .active{
+        background-color: #e2a5e3c5;
+    }
+}
+
+/***************************************/
+/* tamaño pc */
+@media all and (min-width: 800px){/*
+    .proyectos{flex:4 0;}
+    .proyectos{order: 2;}
+    .footer{order: 6;}*/
+    .nombre{
+        font-size: 1em;
+        margin-left: 10%;
+    }
+    .header, .footer{
+        border: 2px solid #65e781;
+        border-radius: 5px;
+    }
+    .proyectos, .sobremi{
+        border: 2px solid rgb(125, 212, 129);
+        border-radius: 3px;
+    }
+    .proyectos{
+        background-color: rgb(255, 255, 255);
+    }
+    .proyectocontainer a{
+        margin: 1em 5em;
+        border: 2px solid #9fe7a3;
+        background-color: rgb(255, 255, 255);
+    }
+    .botonav a:hover {
+        background-color: #9fe7a3;
+      }
+      .botonav a{
+        border-color: #65e781
+    }
+
+    .navbar{
+        margin: 5px 10%;
+    }
+    .selfie img  {
+        max-width: 150px;
+         
+        }
+        .presentacion, .algomas {
+            background-color: #65e78185;
+            border-radius: 15px;
+            
+        }
+        .botonav .active{
+            background-color: #65e781cb;
+        }
+}
+
